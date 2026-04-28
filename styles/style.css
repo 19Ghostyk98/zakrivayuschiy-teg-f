@@ -184,9 +184,7 @@
   border-color: var(--border-color);
 }
 
-.card__like-button {
-  inline-size: 130px;
-  padding-block: 10px;
+.button {
   background: var(--button-bg);
   border: 2px solid var(--border-color);
   font-family: var(--font-accent);
@@ -197,15 +195,15 @@
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--border-color);
 }
-
-.card__like-button::before {
+ 
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -213,16 +211,21 @@
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
 }
-
-.card__like-button:hover::before {
+ 
+.button:hover::before {
   transform: translateX(0);
 }
-
-.card__like-button .button__text {
+ 
+.button .button__text {
   position: relative;
   z-index: 1;
   color: #fff;
   mix-blend-mode: difference;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  padding-block: 10px;
 }
 
 .like-icon {
@@ -304,43 +307,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--button-bg);
-  border: 2px solid var(--border-color);
   padding: 13px 19px;
-  font-family: var(--font-accent);
-  font-size: 14px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-.save-button:focus {
-  outline: none;
-}
-
-.save-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--border-color);
-}
-
-.save-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--border-color);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.save-button:hover::before {
-  transform: translateX(0);
-}
-
-.save-button .button__text {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  mix-blend-mode: difference;
 }
 
 .save-button__icon {
@@ -353,7 +320,7 @@
   color: #fff;
   flex-shrink: 0;
 }
-
+ 
 .save-button__icon__second {
   inline-size: 78px;
   block-size: 40px;
@@ -401,43 +368,7 @@
 .modal__close-button {
   inline-size: 100%;
   padding-block: 10px;
-  background: var(--button-bg);
-  border: 2px solid var(--border-color);
-  font-family: var(--font-accent);
-  font-size: 14px;
   text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-.modal__close-button:focus {
-  outline: none;
-}
-
-.modal__close-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--border-color);
-}
-
-.modal__close-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--border-color);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.modal__close-button:hover::before {
-  transform: translateX(0);
-}
-
-.modal__close-button .button__text {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
