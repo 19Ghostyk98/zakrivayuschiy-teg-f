@@ -232,6 +232,9 @@
   inline-size: 39px;
   block-size: 36px;
   display: block;
+}
+
+.like-icon .heart {
   transform-origin: center;
 }
 
